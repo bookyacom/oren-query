@@ -1,0 +1,24 @@
+{
+  "name": "oren-query",
+  "version": "1.0.0",
+  "description": "Oren Queries Builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bookyacom/oren-query.git"
+  },
+  "keywords": [
+    "orientdb",
+    "oriento",
+    "queries"
+  ],
+  "author": "Yu Jin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bookyacom/oren-query/issues"
+  },
+  "homepage": "https://github.com/bookyacom/oren-query#readme"
+}

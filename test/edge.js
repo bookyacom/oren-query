@@ -122,20 +122,20 @@ describe('#Edge', function() {
       });
     });
 
-    describe('#Delete', function() {
-      it('should be able to remove edge', function(done) {
-        co(function *() {
-          let remove = new edge.Delete('Relation', db, {
-            from: first['@rid'],
-            to: second['@rid']
-          });
+    // describe('#Delete', function() {
+    //   it('should be able to remove edge', function(done) {
+    //     co(function *() {
+    //       let remove = new edge.Delete('Relation', db, {
+    //         from: first['@rid'],
+    //         to: second['@rid']
+    //       });
 
-          let count = yield remove.go();
+    //       let count = yield remove.go();
 
-          assert(count > 0);
-          done();
-        }).catch(done);
-      });
-    });
+    //       assert(count > 0);
+    //       done();
+    //     }).catch(done);
+    //   });
+    // });
   });
 });

@@ -75,66 +75,66 @@ describe('#Edge', function() {
           done();
         })
       });
+    });
 
-      describe('#Create', function(done) {
-        let record1, record2;
+    describe('#Create', function(done) {
+      let record1, record2;
 
-        before(function(done) {
-          co(function *() {
-            record1 = yield parent.create({
-              name: 'test'
-            });
-
-            record2 = yield child.create({
-              name: 'test12'
-            });
-          }).then(done, done);
-        });
-
-        it('should be able to create new edge', function(done) {
-          let create = new edge.Create('Relation', db, {
-            from : record1['@rid'],
-            to   : record2['@rid']
+      before(function(done) {
+        co(function *() {
+          record1 = yield parent.create({
+            name: 'test'
           });
 
-          create.go().then(function(edge) {
-            assert(edge);
-            done();
+          record2 = yield child.create({
+            name: 'test12'
           });
-        });
+        }).then(done, done);
       });
 
-      describe('#Update', function() {
-        it('should be able to update its property', function(done) {
-          co(function *() {
-            let update = new edge.Update('Relation', db, {
-              test: 'test'
-            });
+      it('should be able to create new edge', function(done) {
+        let create = new edge.Create('Relation', db, {
+          from : record1['@rid'],
+          to   : record2['@rid']
+        });
 
-            let count = yield update.set({
-              test: 'test2'
-            }).go();
-
-            assert(count > 0);
-            done()
-          }).catch(done);
+        create.go().then(function(edge) {
+          assert(edge);
+          done();
         });
       });
+    });
 
-      describe('#Delete', function() {
-        it('should be able to remove edge', function(done) {
-          co(function *() {
-            let remove = new edge.Delete('Relation', db, {
-              from: first['@rid'],
-              to: second['@rid']
-            });
+    describe('#Update', function() {
+      it('should be able to update its property', function(done) {
+        co(function *() {
+          let update = new edge.Update('Relation', db, {
+            test: 'test'
+          });
 
-            let count = yield remove.go();
+          let count = yield update.set({
+            test: 'test2'
+          }).go();
 
-            assert(count > 0);
-            done();
-          }).catch(done);
-        });
+          assert(count > 0);
+          done()
+        }).catch(done);
+      });
+    });
+
+    describe('#Delete', function() {
+      it('should be able to remove edge', function(done) {
+        co(function *() {
+          let remove = new edge.Delete('Relation', db, {
+            from: first['@rid'],
+            to: second['@rid']
+          });
+
+          let count = yield remove.go();
+
+          assert(count > 0);
+          done();
+        }).catch(done);
       });
     });
   });

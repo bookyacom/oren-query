@@ -5,4 +5,4 @@ node_js:
   - "iojs"
 
 before_install:
-  - sudo su && chmod +x ./scripts/bootstrap.sh && ./scripts/bootstrap.sh
+  - chmod +x ./scripts/bootstrap.sh && sudo ./scripts/bootstrap.sh

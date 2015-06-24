@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/bookyacom/oren-query#readme",
   "dependencies": {
+    "debug": "^2.2.0",
     "oren-dao": "git://github.com/bookyacom/oren-dao.git"
   },
   "devDependencies": {

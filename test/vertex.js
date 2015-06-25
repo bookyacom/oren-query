@@ -39,7 +39,7 @@ describe('#Vertex', function() {
 
   after(function(done) {
     co(function *() {
-      yield db.delete('VERTEX').scalar();
+      yield db.delete('VERTEX', 'Test').scalar();
       yield db.class.drop('Test');
     }).then(function() {
       done();

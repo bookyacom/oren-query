@@ -47,7 +47,8 @@ describe('#Edge', function() {
 
   after(function(done) {
     co(function *() {
-      yield db.delete('VERTEX').scalar();
+      yield db.delete('VERTEX', 'Parent').scalar();
+      yield db.delete('VERTEX', 'Child').scalar();
       yield db.class.drop('Parent');
       yield db.class.drop('Child');
       yield db.class.drop('Relation');

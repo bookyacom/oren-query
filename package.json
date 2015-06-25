@@ -4,7 +4,7 @@
   "description": "Oren Queries Builder",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --harmony_shipping --harmony_classes --harmony_arrow_functions test/",
+    "test": "./node_modules/mocha/bin/mocha --harmony_shipping --harmony_classes --harmony_arrow_functions --no-timeouts test/",
     "test:watch": "./node_modules/mocha/bin/mocha --watch --harmony_shipping --harmony_classes --harmony_arrow_functions test/"
   },
   "repository": {

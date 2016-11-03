@@ -1,4 +1,4 @@
-# Oren Query [![Build Status](https://travis-ci.org/bookyacom/oren-query.svg?branch=master)](https://travis-ci.org/bookyacom/oren-query)
+# Oren Query [![Build Status](https://travis-ci.org/bookyacom/oren-query.svg?branch=master)](https://travis-ci.org/bookyacom/oren-query) [![Dependency Status](https://gemnasium.com/badges/github.com/bookyacom/oren-query.svg)](https://gemnasium.com/github.com/bookyacom/oren-query)
 
 > Simple ORM for Oriento with find, create, update and delete of document, edge and vertex
 
